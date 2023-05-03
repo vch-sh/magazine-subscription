@@ -1,0 +1,38 @@
+.subscription__item-date {
+	padding: 110px 0;
+}
+
+.subscription__item-date h2 {
+	margin-bottom: 55px;
+}
+
+.subscription__inputs {
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	gap: 10px;
+	margin-bottom: 25px;
+}
+
+.input-day,
+.input-month,
+.input-year {
+	font-size: 24px;
+	width: 110px;
+}
+
+.subscription__input-item {
+	position: relative;
+}
+
+.subscription__input-item label {
+	position: absolute;
+	left: 0;
+	top: -25px;
+	font-size: 18px;
+	color: #000000a7;
+}
+
+.date-button {
+	height: 50px;
+}

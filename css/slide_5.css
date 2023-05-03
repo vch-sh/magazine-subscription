@@ -1,0 +1,20 @@
+.subscription__item-email {
+	padding: 130px 0;
+}
+
+.subscription__item-email h2 {
+	margin-bottom: 40px;
+}
+
+.subscription__email-inner {
+	display: flex;
+	gap: 10px;
+}
+
+.subscription__email-inner input {
+	max-width: 400px;
+}
+
+.email-button {
+	height: 50px;
+}

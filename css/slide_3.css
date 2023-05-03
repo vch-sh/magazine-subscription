@@ -1,0 +1,50 @@
+.subscription__plans-inner {
+	display: flex;
+	align-items: center;
+}
+
+.subscription__item-plans {
+	padding: 90px 0 140px 0;
+}
+
+.subscription__item-plans h2 {
+	margin-top: 30px;
+	margin-bottom: 40px;
+	width: 500px;
+}
+
+.label-container {
+	display: flex;
+	gap: 10px;
+}
+
+.subscription__label {
+	font-size: 20px;
+	text-align: center;
+	cursor: pointer;
+	padding: 10px 15px;
+	border: 1px solid #00000029;
+	transition: all .5s;
+}
+
+.subscription__label:hover {
+	transform: scale(1.1);
+}
+.subscription__label:active {
+	transform: scale(0.9);
+	transform: translateY(-10px);
+}
+
+input[name="group_1"] {
+	display: none;
+}
+
+input[name="group_1"]:checked + label {
+	background-color: limegreen;
+	color: #fff;
+	border-bottom: 3px solid black;
+}
+
+.plans-button {
+	height: 50px;
+}

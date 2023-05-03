@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Magazine Subscription</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+	<link href="https://fonts.googleapis.com/css?family=Oswald:regular" rel="stylesheet" />
+	<link rel="stylesheet" href="./css/style.css">
+	<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js" defer></script>
+	<script src="index.js" defer type="module"></script>
+</head>T
+<body>	
+	<div class="swiper">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide">
+				<div class="subscription__item subscription__item-subscribe">
+					<h2 class="subscription__title">Would you like to get our magazine right into your mailbox?</h2>
+					<button class="subscription__button sub-button">Subscribe</button>
+				</div>
+			</div>
+			<div class="swiper-slide">
+				<div class="subscription__item subscription__item-name">
+					<h2 class="subscription__title">Hi there (⌒ω⌒)ﾉ What's your name?</h2>
+					<div class="subscription__name-wrapper">
+						<input class="subscription__input name-input" placeholder="Enter your name..." spellcheck="false">
+						<button class="subscription__button name-button">next</button>
+					</div>
+				</div>
+			</div>
+			<div class="swiper-slide">
+				<div class="subscription__item subscription__item-plans">
+					<h2 class="subscription__title">What kind of subscription would you like, <div><i class="user-name"></i> ?</div></h2>
+						<div class="label-container">
+							<input id="input_1" type="radio" name="group_1" value="1">
+							<label class="subscription__label" for="input_1">1 month - 7.50$</label>		
+							<input id="input_2" type="radio" name="group_1" value="2">
+							<label class="subscription__label" for="input_2">6 months - 35$</label>		
+							<input id="input_3" type="radio" name="group_1" value="3">
+							<label class="subscription__label" for="input_3">12 months - 75.50$</label>
+							<button class="subscription__button plans-button">next</button>
+						</div>		
+				</div>
+			</div>
+			<div class="swiper-slide">
+				<div class="subscription__item subscription__item-date">
+					<h2 class="subscription__title">When would you like your subscription to start?</h2>
+					<div class="subscription__inputs">
+						<div class="subscription__input-item">
+							<label for="input-day">DD</label>
+							<input class="subscription__input input-day" type="number" data-rule="numberStartDate">
+						</div>
+						<div class="subscription__input-item">
+							<label for="input-day">MM</label>
+							<input class="subscription__input input-month" type="number" data-rule="numberStartDate">
+						</div>
+						<div class="subscription__input-item">
+							<label for="input-day">YYYY</label>
+							<input class="subscription__input input-year" type="number" data-rule="numberStartDate">
+						</div>
+						<button class="subscription__button date-button">next</button>
+					</div>
+				</div>
+			</div>
+
+			<div class="swiper-slide">
+				<div class="subscription__item subscription__item-email">
+					<h2 class="subscription__title">Tell us where we should send the magazine to.</h2>
+					<div class="subscription__email-inner">
+						<input class="subscription__input input__email" type="email" placeholder="example@domain.com" spellcheck="false">		
+						<button class="subscription__button email-button">next</button>
+					</div>
+				</div>
+			</div>
+			<div class="swiper-slide">
+				<div class="subscription__item subscription__payment-item">
+					<h2 class="subscription__title">And the last is payment details.</h2>
+					<div class="subscription__payment">
+						<p class="subscription__payment-title">Name on card</p>
+						<input class="subscription__payment-input payment-name" placeholder="John Smith" spellcheck="false">
+						<p class="subscription__payment-title">Card number</p>
+						<input class="subscription__payment-input payment-card" placeholder="1234-1234-1234-1234" type="text" maxlength="19">
+						<div class="subscription__payment-inner">
+							<p class="subscription__payment-title">Expiry date</p>
+							<input class="subscription__payment-input peyment-expiry" placeholder="MM / YY" type="text" maxlength="5">
+							<p class="subscription__payment-title">Security code</p>
+							<input class="subscription__payment-input payment-cvc" placeholder="CVC" type="text" maxlength="3">
+						</div>
+					</div>
+					<button class="subscription__button submit-button" type="submit">Submit</button>
+				</div>
+			</div>
+			<div class="swiper-slide">
+				<div class="subscription__item subscription__item-thanks">
+					<h2 class="subscription__title">Thank you for subscribing, <div><i class="user-payment-name"></i></div> Check out your e-mail for extra details about subscription. <br>Enjoy reading :)</h2>
+				</div>
+			</div>
+		</div>
+		<div class="swiper-pagination"></div>	
+	</div>  
+</body>
+</html>
