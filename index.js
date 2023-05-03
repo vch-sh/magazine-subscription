@@ -11,32 +11,32 @@ const swiper = new Swiper('.swiper', {
 });
 
 // 1. DOM
-const subButton 								= document.querySelector('.sub-button');
+const subButton 		= document.querySelector('.sub-button');
 
-const subscriptionInput 				= document.querySelector('.subscription__input');
-const nameInput 								= document.querySelector('.name-input');
-const userName 									= document.querySelector('.user-name');
-const nameButton 								= document.querySelector('.name-button');
+const subscriptionInput 	= document.querySelector('.subscription__input');
+const nameInput 		= document.querySelector('.name-input');
+const userName 			= document.querySelector('.user-name');
+const nameButton 		= document.querySelector('.name-button');
 
-const plansInputs 							= document.querySelectorAll('input[name="group_1"]');
-const plansButton 							= document.querySelector('.plans-button');
+const plansInputs 		= document.querySelectorAll('input[name="group_1"]');
+const plansButton 		= document.querySelector('.plans-button');
 
 const subscriptionPaymentInput 	= document.querySelector('.subscription__payment-input');
-const userPaymentName 					= document.querySelector('.user-payment-name');
+const userPaymentName 		= document.querySelector('.user-payment-name');
 
-const inputDay 									= document.querySelector('.input-day');
-const inputMonth 								= document.querySelector('.input-month');
-const inputYear 								= document.querySelector('.input-year');
-const dateButton 								= document.querySelector('.date-button');
+const inputDay 			= document.querySelector('.input-day');
+const inputMonth 		= document.querySelector('.input-month');
+const inputYear 		= document.querySelector('.input-year');
+const dateButton 		= document.querySelector('.date-button');
 
-const inputEmail 								= document.querySelector('.input__email');
-const emailButton 							= document.querySelector('.email-button');
+const inputEmail 		= document.querySelector('.input__email');
+const emailButton 		= document.querySelector('.email-button');
 
-const paymentName 							= document.querySelector('.payment-name');
-const paymentCard 							= document.querySelector('.payment-card');
-const paymentExpiry 						= document.querySelector('.peyment-expiry');
-const paymentCVC 								= document.querySelector('.payment-cvc');
-const submitButton 							= document.querySelector('.submit-button');
+const paymentName 		= document.querySelector('.payment-name');
+const paymentCard 		= document.querySelector('.payment-card');
+const paymentExpiry 		= document.querySelector('.peyment-expiry');
+const paymentCVC 		= document.querySelector('.payment-cvc');
+const submitButton 		= document.querySelector('.submit-button');
 
 // 2. Variables
 let checkInputDate;
@@ -58,38 +58,38 @@ subscriptionPaymentInput.addEventListener('blur', () => {
 	userPaymentName.textContent = localStorage.paymentName;
 });
 
-inputDay.addEventListener				('input', checkInputValid);
-inputMonth.addEventListener			('input', checkInputValid);
-inputYear.addEventListener			('input', checkInputYearValid);
-inputDay.addEventListener				('input', reduceToTwoCharacters);
-inputMonth.addEventListener			('input', reduceToTwoCharacters);
-inputYear.addEventListener			('input', reduceToFourCharacters);
+inputDay.addEventListener	('input', checkInputValid);
+inputMonth.addEventListener	('input', checkInputValid);
+inputYear.addEventListener	('input', checkInputYearValid);
+inputDay.addEventListener	('input', reduceToTwoCharacters);
+inputMonth.addEventListener	('input', reduceToTwoCharacters);
+inputYear.addEventListener	('input', reduceToFourCharacters);
 
-paymentName.addEventListener		('input', checkPaymentNameValid);
-paymentCard.addEventListener		('input', addDash);
-paymentCard.addEventListener		('input', checkPaymentCardValid);
+paymentName.addEventListener	('input', checkPaymentNameValid);
+paymentCard.addEventListener	('input', addDash);
+paymentCard.addEventListener	('input', checkPaymentCardValid);
 paymentExpiry.addEventListener	('input', addSlash);
 paymentExpiry.addEventListener	('input', checkPaymentExpiryValid);
-paymentCVC.addEventListener			('input', checkPaymentCVCValid);
+paymentCVC.addEventListener	('input', checkPaymentCVCValid);
 
 // 4. Button Events
-subButton.addEventListener			('click', nextSlide);
+subButton.addEventListener	('click', nextSlide);
 
-nameButton.addEventListener			('click', checkNameValid);
+nameButton.addEventListener	('click', checkNameValid);
 
-plansButton.addEventListener		('click', function() {
+plansButton.addEventListener	('click', function() {
 	for (let plansInput of plansInputs) {
 		if (plansInput.checked) nextSlide();
 	}
 })
 
-dateButton.addEventListener			('click', function() {
+dateButton.addEventListener	('click', function() {
 	if (checkInputDate && checkInputYear) setTimeout(nextSlide, 500);
 })
 
-emailButton.addEventListener		('click', checkEmailValid);
+emailButton.addEventListener	('click', checkEmailValid);
 
-submitButton.addEventListener		('click', checkPaymentInfo);
+submitButton.addEventListener	('click', checkPaymentInfo);
 
 sessionStorage.clear();
 
