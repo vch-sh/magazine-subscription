@@ -1,4 +1,4 @@
-## [Magazine Subscription](https://vch-sh.github.io/js-magazine-subscription/) 
+## [Magazine Subscription](https://vch-sh.github.io/magazine-subscription/) 
 **Ctrl/Command** + click to open a link in a new window
 
 The project offers the possibility to "subscribe" to an electronic magazine after filling in the necessary information. At each stage, its validity is checked using regular expressions.
